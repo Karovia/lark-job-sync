@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "confirmed_at": "2026-11-13",
+  "confirmed_by": "<用户确认时使用的账号/称呼>",
+  "target": {
+    "spreadsheet_token": "GIDpsafgbhdNA8tMasMcaw5gnGe",
+    "url": "https://uq1ro7vc0a.feishu.cn/sheets/GIDpsafgbhdNA8tMasMcaw5gnGe",
+    "sheet_id": "oQPkx0",
+    "sheet_name": "Quant"
+  },
+  "routes": [
+    {
+      "match_type": "source_sheet",
+      "source_token": "shtcnzAfngrsRRxHlysm20QKA9g",
+      "source_sheet_id": "UAC3sT",
+      "target_sheet_id": "oQPkx0",
+      "section_mode": "keyword",
+      "note": "源2 新职位quant：按关键词分到 Quant 的三个分区"
+    },
+    {
+      "match_type": "keywords",
+      "keywords": ["期权", "期货", "CTA", "衍生品", "可转债", "FICC", "商品", "股指"],
+      "target_sheet_id": "oQPkx0",
+      "section_name": "期权/期货QR"
+    },
+    {
+      "match_type": "keywords",
+      "keywords": ["crypto", "web3", "固收", "债券", "利率", "ETF", "数字货币"],
+      "target_sheet_id": "oQPkx0",
+      "section_name": "Crypto/固收/ETF/等其他QR"
+    }
+  ],
+  "fallback": {
+    "target_sheet_id": "oQPkx0",
+    "section_name": "股票QR",
+    "note": "未命中任何路由/关键词时的兜底落位"
+  }
+}
